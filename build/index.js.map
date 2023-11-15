@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": ["../src/util/string.js", "../src/components/input.js", "../src/components/select.js"],
+  "sourcesContent": [
+    "function add() {\n  return 'add';\n}\n\nfunction year() {\n  return new Date().getFullYear();\n}\n\nexport { add, year };",
+  "import { add, year } from '../util/string.js';\nconst tagName = 'custom-input';\nconst template = `\n  <input type=\"text\" placeholder=\"${year()}\" />\n`;\n\nclass Input extends HTMLElement {\n  constructor() {\n    super();\n    this.attachShadow({ mode: 'open' });\n    this.shadowRoot.innerHTML = template;\n    console.log('input created');\n  }\n}\n\ncustomElements.define(tagName, Input);",
+  "import { add, year } from '../util/string.js';\nconst tagName = 'custom-select';\nconst template = `\n  <select>\n    <option value=\"${add()}\">${year()}</option>\n  </select>\n`;\n\nclass Input extends HTMLElement {\n  constructor() {\n    super();\n    this.attachShadow({ mode: 'open' });\n    this.shadowRoot.innerHTML = template;\n    console.log('input created');\n  }\n}\n\ncustomElements.define(tagName, Input);"
+  ],
+  "mappings": ";AAAA,IAAS,cAAG,GAAG;AACb,SAAO;AAAA;AAGT,IAAS,eAAI,GAAG;AACd,SAAO,IAAI,KAAK,EAAE,YAAY;AAAA;;;ACJhC,IAAM,UAAU;AAChB,IAAM,WAAW;AAAA,oCACmB,KAAK;AAAA;AAGzC;AAAA,MAAM,cAAc,YAAY;AAAA,EAC9B,WAAW,GAAG;AACZ,UAAM;AACN,SAAK,aAAa,EAAE,MAAM,OAAO,CAAC;AAClC,SAAK,WAAW,YAAY;AAC5B,YAAQ,IAAI,eAAe;AAAA;AAE/B;AAEA,eAAe,OAAO,SAAS,KAAK;;;ACdpC,IAAM,WAAU;AAChB,IAAM,YAAW;AAAA;AAAA,qBAEI,IAAI,MAAM,KAAK;AAAA;AAAA;AAIpC;AAAA,MAAM,eAAc,YAAY;AAAA,EAC9B,WAAW,GAAG;AACZ,UAAM;AACN,SAAK,aAAa,EAAE,MAAM,OAAO,CAAC;AAClC,SAAK,WAAW,YAAY;AAC5B,YAAQ,IAAI,eAAe;AAAA;AAE/B;AAEA,eAAe,OAAO,UAAS,MAAK;",
+  "debugId": "DA8D2FDA1CB9205064756e2164756e21",
+  "names": []
+}
